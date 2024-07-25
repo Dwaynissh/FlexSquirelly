@@ -7,24 +7,19 @@ import { usePathname } from "next/navigation";
 import data from "../../data/data.json";
 import { Context } from "../../global/provider";
 const page = () => {
-  const { entry, setEntry } = useContext(Context);
-
+  const { entry, setEntry, user } = useContext(Context);
   const [text, setText] = useState<string>("");
 
   const path = usePathname();
   const val = path.replace("/", "");
 
-  let showPath = 0;
-
-  if (val === "") {
-    showPath = 0;
-  } else {
-    showPath = parseInt(val);
-  }
+  let showPath = parseInt(val);
 
   useEffect(() => {
     setEntry(false);
   }, []);
+
+  console.log(showPath);
 
   return (
     <div className="min-h-[calc(100vh-20px)] ">

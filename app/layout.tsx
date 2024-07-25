@@ -19,8 +19,8 @@ export default function RootLayout({
     <Provider>
       <html lang="en">
         <body className={inter.className}>
-          <div className="p-1 m-2  flex justify-center transition-all duration-300 ">
-            <main className="bg-slate-100 rounded-md h-full lg:w-full xl:w-[80%] border">
+          <div className="p-1 m-2 flex justify-center transition-all duration-300 ">
+            <main className="bg-[slate-100] rounded-md h-full w-full lg:w-full xl:w-[80%] border">
               {children}
             </main>
           </div>
