@@ -17,6 +17,7 @@ interface iProps {
   question?: string;
   id?: number;
   showPath?: number;
+  user?: string;
 }
 
 export const QuestionPart: FC<iProps> = ({
@@ -27,6 +28,7 @@ export const QuestionPart: FC<iProps> = ({
   question,
   answer,
   showPath,
+  user,
 }) => {
   const { entry, setEntry } = useContext(Context);
   const [value, setValue] = useState<boolean>(false);
@@ -67,13 +69,13 @@ export const QuestionPart: FC<iProps> = ({
 
   return (
     <div
-      className="order-2 lg:order-1 col-span-1 lg:col-span-4 bg-slate-200 
+      className="order-2 lg:order-1 col-span-1 lg:col-span-4 bg-[#e38e6c]
     py-4 px-8 h-full flex flex-col"
     >
       <section className="flex w-full justify-between">
         <div>
           <p className="font-bold text-[18px]">CSS-Flex Mastery </p>
-          <p>user</p>
+          <p>{JSON.parse(localStorage.getItem("user")!)}</p>
         </div>
         <p className="bg-orange-50 h-[35px] text-[16px] w-[100px] rounded-sm flex justify-center items-center">
           level {showPath!}
