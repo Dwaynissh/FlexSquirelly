@@ -2,7 +2,7 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import { QuestionPart } from "../../components/QuestionPart";
-import { DisplayPart } from "../../components/DisplayPart";
+import { DisplayPart } from "../../(display)/DisplayLvl5";
 import data from "../../data/data.json";
 import { usePathname } from "next/navigation";
 import { Context } from "../../global/provider";
